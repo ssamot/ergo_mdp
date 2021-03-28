@@ -1,4 +1,4 @@
 # ergo_mdp
 Ergodic economics simulations using MDP formalisms
 
-[/plots/plot/hist-crop.png|ALT TEXT]
+![Percentages of winners and losers](https://github.com/ssamot/ergo_mdp/blob/main/hist.png?raw=true)
