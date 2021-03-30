@@ -39,6 +39,9 @@ The problem with this approach is that it's not trivial to model this arbitrary 
 
 ![Wealth of winners and losers](https://github.com/ssamot/ergo_mdp/blob/main/plots/hist_means_less_rounds.png?raw=true)
 
+![Tree](https://github.com/ssamot/ergo_mdp/blob/main/plots/tree.png?raw=true)
+
+
 Well, the model is bonkers. The vast population becomes broke; the probability of being extremely wealthy is less and less (but more wealthy as things move forward). At the very end, because you cannot subdivide an indivudal to fewer than one points and let them have infinite wealth, the whole wealth model collapses.
 
 So what is the
