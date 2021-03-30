@@ -1,0 +1,60 @@
+strict digraph "" {
+	"Play 10.00"	 [action_node=False];
+	15.00	 [action_node=True];
+	"Play 10.00" -> 15.00	 [R=5.0,
+		label="R = 5.00"];
+	6.00	 [action_node=True];
+	"Play 10.00" -> 6.00	 [R=-4.0,
+		label="R = -4.00"];
+	"Stop 10.00"	 [action_node=False];
+	10.00	 [action_node=True];
+	10.00 -> "Play 10.00"	 [label=Play];
+	10.00 -> "Stop 10.00"	 [label=Stop];
+	"Play 15.00"	 [action_node=False];
+	15.00 -> "Play 15.00"	 [label=Play];
+	"Stop 15.00"	 [action_node=False];
+	15.00 -> "Stop 15.00"	 [label=Stop];
+	"Play 6.00"	 [action_node=False];
+	6.00 -> "Play 6.00"	 [label=Play];
+	"Stop 6.00"	 [action_node=False];
+	6.00 -> "Stop 6.00"	 [label=Stop];
+	22.50	 [action_node=True];
+	"Play 15.00" -> 22.50	 [R=7.5,
+		label="R = 7.50"];
+	9.00	 [action_node=True];
+	"Play 15.00" -> 9.00	 [R=-6.0,
+		label="R = -6.00"];
+	"Play 22.50"	 [action_node=False];
+	22.50 -> "Play 22.50"	 [label=Play];
+	"Stop 22.50"	 [action_node=False];
+	22.50 -> "Stop 22.50"	 [label=Stop];
+	"Play 9.00"	 [action_node=False];
+	9.00 -> "Play 9.00"	 [label=Play];
+	"Stop 9.00"	 [action_node=False];
+	9.00 -> "Stop 9.00"	 [label=Stop];
+	33.75	 [action_node=True];
+	"Play 22.50" -> 33.75	 [R=11.25,
+		label="R = 11.25"];
+	13.50	 [action_node=True];
+	"Play 22.50" -> 13.50	 [R=-9.0,
+		label="R = -9.00"];
+	"Play 9.00" -> 13.50	 [R=4.5,
+		label="R = 4.50"];
+	5.40	 [action_node=True];
+	"Play 9.00" -> 5.40	 [R=-3.6,
+		label="R = -3.60"];
+	"Play 6.00" -> 9.00	 [R=3.0,
+		label="R = 3.00"];
+	3.60	 [action_node=True];
+	"Play 6.00" -> 3.60	 [R=-2.4000000000000004,
+		label="R = -2.40"];
+	"Play 3.60"	 [action_node=False];
+	3.60 -> "Play 3.60"	 [label=Play];
+	"Stop 3.60"	 [action_node=False];
+	3.60 -> "Stop 3.60"	 [label=Stop];
+	"Play 3.60" -> 5.40	 [R=1.7999999999999998,
+		label="R = 1.80"];
+	2.16	 [action_node=True];
+	"Play 3.60" -> 2.16	 [R=-1.44,
+		label="R = -1.44"];
+}

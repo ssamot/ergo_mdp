@@ -1,6 +1,7 @@
 from matplotlib import pyplot as plt
 import numpy as np
 from numba import njit, prange, jit
+plt.style.use('seaborn')
 
 
 
@@ -17,7 +18,7 @@ def main():
     plt.plot(np.log10(hist_means.T[0]), linestyle = ":", linewidth=linewidth)
     plt.plot(np.log10(scores[:, :max_step].mean(axis=0)), linestyle="-", linewidth=0.1)
     plt.xlabel("Rounds of betting")
-    plt.ylabel("$<log_{10}>$ money")
+    plt.ylabel("$<log_{10}>$ wealth")
     plt.legend(["Winners", "Losers", "Total"])
     plt.savefig("./plots/hist_means.pdf")
 
