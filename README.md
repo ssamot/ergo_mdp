@@ -24,11 +24,9 @@ Episodic MDPs, unlike their non-episodic counterparts, have proven ergodic prope
 
 [Taleb's take on this](https://medium.com/incerto/the-logic-of-risk-taking-107bf41029d3)
 
-<p align="justify">
 
 ![\\\\R\left((x,win),null\right) = 0.5x \\R\left((x,lose),null\right) = -0.4x  \\R\left((x,choose),stop\right) = 0  \\\\P((x,win)|(x,choose),play) = 0.5\\P((x,lose)|(x,choose),play) = 0.5\\P((x,stopped)|(x,choose),stop) = 1\\P((x+0.5x,choose)|(x,win),null) = 1\\P((x-04x,choose)|(x,lose),null) = 1\\\\](https://latex.codecogs.com/svg.latex?%5C%5C%20%5C%5CR%5Cleft%28%28x%2Cwin%29%2Cnull%5Cright%29%20%3D%200.5x%20%5C%5C%20R%5Cleft%28%28x%2Close%29%2Cnull%5Cright%29%20%3D%20-0.4x%20%5C%5C%20R%5Cleft%28%28x%2Cchoose%29%2Cstop%5Cright%29%20%3D%200%20%5C%5C%20%5C%5C%20P%28%28x%2Cwin%29%7C%28x%2Cchoose%29%2Cplay%29%20%3D%200.5%5C%5C%20P%28%28x%2Close%29%7C%28x%2Cchoose%29%2Cplay%29%20%3D%200.5%5C%5C%20P%28%28x%2Cstopped%29%7C%28x%2Cchoose%29%2Cstop%29%20%3D%201%5C%5C%20P%28%28x+0.5x%2Cchoose%29%7C%28x%2Cwin%29%2Cnull%29%20%3D%201%5C%5C%20P%28%28x-04x%2Cchoose%29%7C%28x%2Close%29%2Cnull%29%20%3D%201%5C%5C%20%5C%5C)
 
-</p>
 I would argue that most MDPs of interest are clearly non-ergodic. An MDP combined with a stochastic policy \pi is ergodic if all deterministic policies result in Markov Reward Processes that are ergodic. Almost all RL algorithms assume ergodicity. Value Iteration, the prime one, will just pass back rewards
 
 Equivalently, we can say that an agent with a stochastic policy should be able to visit all states. The problem of ergodicity is that it makes agents overoptimistic, as it kinds of assumes that kinds of possible errors and bad luck are eventually recoverable. If I train as if ergodicity true, a 99% chance of losing everything vs an 1% chance of winning big times will average out, and an agent might actually go for high payout.

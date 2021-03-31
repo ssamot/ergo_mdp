@@ -18,9 +18,11 @@ def main():
     plt.plot((hist_means.T[1]), linestyle = "-", linewidth=linewidth)
     plt.plot((hist_means.T[0]), linestyle = "-", linewidth=linewidth)
     plt.plot((scores[:, :max_step].mean(axis=0)), linestyle="-", linewidth=0.1)
+    plt.plot((np.median(scores[:, :max_step],axis = 0)), linestyle="-", linewidth=0.1)
+    #print(np.median(scores[:, :max_step]))
     plt.xlabel("Rounds of betting")
     plt.ylabel("Wealth")
-    plt.legend(["Winners", "Losers", "Total"])
+    plt.legend(["Winners", "Losers", "Mean", "Median"])
     plt.savefig("./plots/hist_means_less_rounds.pdf")
 
     plt.clf()

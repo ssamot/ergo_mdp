@@ -1,15 +1,31 @@
 from matplotlib import pyplot as plt
 import numpy as np
 from numba import njit, prange, jit
+import seaborn as sns
 plt.style.use('seaborn')
+from scipy.optimize import curve_fit
+
 
 
 
 def main():
     scores = np.load("scores_mult.npy")
+    #
 
     bins = np.array([0.0, 10.0, np.inf])
     max_step = 3000
+    #
+    # hist_scores = ((scores[:,max_step-1]))
+    # print(hist_scores.mean())
+    # print(hist_scores.std())
+    # exit()
+
+
+
+    #h = np.histogram(hist_scores, bins = "auto")
+    # sns.histplot(hist_scores, bins="auto")
+    # plt.savefig("hist.pdf")
+    # exit()
 
     linewidth = 1.5
     hist, hist_means = get_histograms(scores, max_step, bins)
@@ -17,9 +33,10 @@ def main():
     plt.plot(np.log10(hist_means.T[1]), linestyle = "--", linewidth=linewidth)
     plt.plot(np.log10(hist_means.T[0]), linestyle = ":", linewidth=linewidth)
     plt.plot(np.log10(scores[:, :max_step].mean(axis=0)), linestyle="-", linewidth=0.1)
+    plt.plot(np.log10(np.median(scores[:, :max_step],axis=0)), linestyle="-", linewidth=0.1)
     plt.xlabel("Rounds of betting")
     plt.ylabel("$<log_{10}>$ wealth")
-    plt.legend(["Winners", "Losers", "Total"])
+    plt.legend(["Winners", "Losers", "Mean", "Median"])
     plt.savefig("./plots/hist_means.pdf")
 
     plt.clf()
