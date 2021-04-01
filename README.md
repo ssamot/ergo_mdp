@@ -17,7 +17,7 @@ Episodic MDPs, unlike their non-episodic counterparts, have proven ergodic prope
 
 ![\lim_{T \to \inf} \frac{1}{T}\mathop{\mathbb{E}}\sum_{t = 1}^TR(s_t,a_t) = V_\pi(s_0)](https://latex.codecogs.com/svg.latex?%5Clim_%7BT%20%5Cto%20%5Cinf%7D%20%5Cfrac%7B1%7D%7BT%7D%5Csum_%7Bt%20%3D%201%7D%5ETR%28s_t%2Ca_t%29%20%3D%20V_%5Cpi%28s_0%29)
 
-![{{R(s,s')} = \left\{ {\begin{array}{*{20}{c}} {0.5s,\quad P_{s,s_h'} = \frac{1}{2}} \\ {- 0.4s,\quad P_{s,s_t'} = \frac{1}{2}} \end{array}} \right.](https://latex.codecogs.com/svg.latex?%7BR%28s%2Cs%27%29%7D%20%3D%20%5Cleft%5C%7B%20%7B%5Cbegin%7Barray%7D%7B*%7B20%7D%7Bc%7D%7D%20%7B0.5s%2C%5Cquad%20P_%7Bs%2Cs_h%27%7D%20%3D%20%5Cfrac%7B1%7D%7B2%7D%7D%20%5C%5C%20%7B-%200.4s%2C%5Cquad%20P_%7Bs%2Cs_t%27%7D%20%3D%20%5Cfrac%7B1%7D%7B2%7D%7D%20%5Cend%7Barray%7D%7D%20%5Cright.)
+![x' = \left\{ {\begin{array}{*{20}{c}} {x + 0.5x,\quad p = \frac{1}{2}} \\ {x- 0.4x,\quad p = \frac{1}{2}} \end{array}} \right\}](https://latex.codecogs.com/svg.latex?x%27%20%3D%20%5Cleft%5C%7B%20%7B%5Cbegin%7Barray%7D%7B*%7B20%7D%7Bc%7D%7D%20%7Bx%20+%200.5x%2C%5Cquad%20p%20%3D%20%5Cfrac%7B1%7D%7B2%7D%7D%20%5C%5C%20%7Bx-%200.4x%2C%5Cquad%20p%20%3D%20%5Cfrac%7B1%7D%7B2%7D%7D%20%5Cend%7Barray%7D%7D%20%5Cright%5C%7D)
 
 
 ![\lim_{T \to\inf}\frac{1}{T}\mathop{\mathbb{E}}\left[\sum_{t = 1}^TR(s_t,a_t) \right] = V_\pi(s_)](https://latex.codecogs.com/svg.download?%5Clim_%7BT%20%5Cto%20%5Cinf%7D%20%5Cfrac%7B1%7D%7BT%7D%5Cmathop%7B%5Cmathbb%7BE%7D%7D%5Cleft%5B%5Csum_%7Bt%20%3D%201%7D%5ET%20R%28s_t%2Ca_t%29%20%5Cright%20%5D%20%3D%20V_%5Cpi%28s_0%29)
